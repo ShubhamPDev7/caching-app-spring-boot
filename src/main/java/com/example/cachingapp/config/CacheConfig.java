@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Configuration;
 public class CacheConfig {
     @Bean
     public CacheManager cacheManager() {
-        return new ConcurrentMapCacheManager("employee");
+        return new ConcurrentMapCacheManager();
     }
 }
