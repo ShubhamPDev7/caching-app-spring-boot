@@ -27,7 +27,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private final String CACHE_NAME = "employees";
 
     @Override
-    @Cacheable(value = CACHE_NAME, key = "#id")
+    @Cacheable(cacheNames = CACHE_NAME, key = "#id")
     public EmployeeDto getEmployeeById(Long id) {
         log.info("Fetching employee with id: {}", id);
         Employee employee = employeeRepository.findById(id)
